@@ -2,7 +2,7 @@
 
 # Bahamut Anime Enhancer
 
-An LSPosed module that fixes the brightness and volume gestures in the landscape player of **Anime Crazy** (巴哈姆特動畫瘋, `tw.com.gamer.android.animad`), and adds its settings to the player's own **Playback settings** panel.
+An LSPosed module that fixes the brightness and volume gestures in the player of **Anime Crazy** (巴哈姆特動畫瘋, `tw.com.gamer.android.animad`), and adds its settings to the player's own **Playback settings** panel.
 
 ## Features
 
