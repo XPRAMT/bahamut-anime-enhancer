@@ -1,0 +1,56 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'dev.xpramt.bahamutenhancer'
+    compileSdk 37
+
+    defaultConfig {
+        applicationId 'dev.xpramt.bahamutenhancer'
+        minSdk 31
+        targetSdk 35
+        versionCode 3
+        versionName '1.0.0'
+        // Tells the generations apart in the log and in a hot reload: every build gets its own marker.
+        buildConfigField 'String', 'BUILD_MARKER', "\"${new Date().format('MMdd-HHmmss')}\""
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    signingConfigs {
+        def releaseKeystore = System.getenv('BAE_ANDROID_KEYSTORE')
+        if (releaseKeystore) {
+            release {
+                storeFile file(releaseKeystore)
+                storePassword System.getenv('BAE_ANDROID_KEYSTORE_PASSWORD')
+                keyAlias System.getenv('BAE_ANDROID_KEY_ALIAS')
+                keyPassword System.getenv('BAE_ANDROID_KEY_PASSWORD')
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            // The release key comes from BAE_ANDROID_* environment variables (see tools/build-release.ps1);
+            // without them the debug key is used so the result can still be installed and measured locally.
+            signingConfig System.getenv('BAE_ANDROID_KEYSTORE') ? signingConfigs.release : signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    compileOnly 'io.github.libxposed:api:102.0.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    testImplementation 'junit:junit:4.13.2'
+}

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">動畫瘋手勢修正</string>
+    <string name="module_description">動畫瘋橫向播放器亮度與音量手勢修正</string>
+    <string name="status_installed">模組已安裝</string>
+    <string name="status_target">動畫瘋 %1$s（%2$d）</string>
+    <string name="status_target_missing">未偵測到動畫瘋，請先安裝官方 App</string>
+    <string name="usage_title">使用方式</string>
+    <string name="usage_body">在 LSPosed 啟用本模組並勾選動畫瘋。設定在動畫瘋的播放設定面板底部，與動畫瘋的其他設定一起保存。</string>
+</resources>

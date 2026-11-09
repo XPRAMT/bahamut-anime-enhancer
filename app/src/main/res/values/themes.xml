@@ -1,0 +1,21 @@
+<resources>
+    <!-- Light: Material 3 default background; primary tone 40; containers and text from the official palette. -->
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#006781</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">#B9EAFF</item>
+        <item name="colorOnPrimaryContainer">#001F29</item>
+        <item name="colorSecondaryContainer">#B9EAFF</item>
+        <item name="colorOnSecondaryContainer">#001F29</item>
+        <item name="colorOnSurface">#2B3438</item>
+        <item name="colorOnSurfaceVariant">#586065</item>
+        <item name="colorSurfaceVariant">#DBE4E9</item>
+        <item name="colorSurfaceContainerLowest">#FFFFFF</item>
+        <item name="colorSurfaceContainerLow">#EFF4F8</item>
+        <item name="colorSurfaceContainer">#E8EFF3</item>
+        <item name="colorSurfaceContainerHigh">#E2E9EE</item>
+        <item name="colorSurfaceContainerHighest">#DBE4E9</item>
+        <item name="colorOutline">#737C81</item>
+        <item name="colorOutlineVariant">#AAB3B8</item>
+    </style>
+</resources>

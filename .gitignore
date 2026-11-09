@@ -1,0 +1,37 @@
+/.gradle/
+/.idea/
+/build/
+/app/build/
+/local.properties
+*.apk
+*.aab
+
+# Pulled and generated reverse-engineering artifacts
+/reverse/apk/
+/reverse/decompiled/
+/reverse/jadx/
+/reverse/lspd/
+/reverse/ui/
+/reverse/logs/
+
+# Reproducible no-root trial decode/build output and local signing artifacts
+/no-root/work/
+/no-root/work-*/
+/no-root/output/
+/no-root/output-*/
+/no-root/verification/
+/no-root/*.keystore
+/no-root/inspect-full-port-v4/
+/no-root/support-compile-check/
+/no-root/support-d8-check/
+
+# Local CodeGraph index and runtime state
+/.codegraph/
+
+# Local signing material
+*.jks
+*.keystore
+__pycache__/
+/artifacts/
+/release/
+/AGENTS.md
